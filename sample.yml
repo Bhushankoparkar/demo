@@ -1,0 +1,10 @@
+--- 
+- name: playbook1
+  hosts: localhost
+  tasks:
+      - name: print messages_1
+        debuge: 
+            msg: "{{URL}}"
+  vars:
+      URL: cloudblitz.in
+      
