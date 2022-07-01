@@ -1,0 +1,8 @@
+---
+- name: playbook
+  hosts: demo
+  vars: 
+    pkgname: apache2
+  tasks: 
+    - name: install apache2 server
+      action: apt-get='{{pkgname}}' state=installed
