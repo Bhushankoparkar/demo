@@ -1,8 +1,9 @@
 ---
 - name: playbook
-  hosts: demo
+  hosts: all
+  become: yes
   vars: 
-    pkgname: apache2
+    pkgname: nginx
   tasks: 
-    - name: install apache2 server
-      action: apt-get='{{pkgname}}' state=installed
+    - name: install nginx server
+      action: apt-get='{{nginx}}' state=installed
